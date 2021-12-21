@@ -1,0 +1,15 @@
+#!/bin/sh
+
+
+/root/onos/bin/onos-service -server 
+
+export ONOS_APPS="openflow,gui2,pathpainter,fwd"
+export JAVA_DEBUG_PORT="0.0.0.0:5005"
+sed -ibak '/log4j.rootLogger=/s/$/, stdout/' $(ls -d apache-karaf-*)/etc/org.ops4j.pax.logging.cfg
+
+ifconfig eth0 1.0.0.1/8 up
+
+
+
+#ifconfig eth1 10.10.0.1/16 up
+

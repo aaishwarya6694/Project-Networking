@@ -1,0 +1,2 @@
+ifconfig eth0 20.20.0.1/16 up
+ip route add 40.40.0.0/18 via 20.20.0.1 dev eth0

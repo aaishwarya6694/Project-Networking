@@ -1,0 +1,2 @@
+ip addr add 40.40.0.1/18 dev eth0
+ip route add 20.20.0.0/16 via 40.40.0.1 dev eth0
